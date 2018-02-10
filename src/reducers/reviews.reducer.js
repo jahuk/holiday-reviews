@@ -1,16 +1,29 @@
-// import * as ReviewsActions from '../actions/reviews.actions';
+import * as ReviewsActions from '../actions/reviews.actions';
 
 const defaultState = [];
 
 export default (state = defaultState, action) => {
 
-  switch (action.type) {
+    switch (action.type) {
 
-    // case AppActions.DATA_FETCH_DONE:
-    //   return action.bets;
+        case ReviewsActions.REVIEWS_FETCH_DONE:
+            return action.json;
 
-    default:
-      return state;
-  }
+        case ReviewsActions.COMMENT_ADD:
+            return state.map((review) => {
+                return review.id === action.reviewId
+                    ? {
+                        ...review,
+                        comments: [
+                            ...review.comments,
+                            action.comment
+                        ]
+                    }
+                    : review;
+            });
+
+        default:
+            return state;
+    }
 
 };

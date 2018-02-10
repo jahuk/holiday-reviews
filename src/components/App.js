@@ -1,9 +1,32 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
+import * as ReviewsActions from '../actions/reviews.actions';
 
-const Back = () => (
-    <div className="a">
-        aaa
-    </div>
-);
+class App extends React.Component {
 
-export default Back;
+    componentDidMount() {
+        this.props.getReviews();
+    }
+
+    render() {
+        return (
+            <main>
+                <section>
+                    Reviews
+                </section>
+            </main>
+        );
+    }
+
+}
+
+App.propTypes = {
+    getReviews: PropTypes.func,
+};
+
+const mapDispatchToProps = {
+    getReviews: ReviewsActions.getReviews
+};
+
+export default connect(null, mapDispatchToProps)(App);
