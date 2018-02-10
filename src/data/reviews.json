@@ -7,7 +7,7 @@
       "name": "Crystal Lawson",
       "photo": "https://randomuser.me/api/portraits/women/44.jpg"
     },
-    "isRecommended": true,
+    "isPositive": true,
     "ratings": 4,
     "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi porttitor ipsum sapien. Nulla ligula sapien, pulvinar quis interdum sit amet, congue vel diam. Quisque eget lorem tortor. Sed quis turpis viverra, ornare metus sit amet, sodales augue. Donec ligula mi, blandit in arcu id, luctus vehicula risus. Phasellus viverra porta diam vel convallis. Cras tempus eleifend mi ac blandit. Vivamus et egestas arcu. Nunc vestibulum ex quis urna rutrum, tincidunt euismod est finibus.",
     "comments": []
@@ -20,7 +20,7 @@
       "name": "Leonard Kingsley",
       "photo": "https://randomuser.me/api/portraits/men/12.jpg"
     },
-    "isRecommended": false,
+    "isPositive": false,
     "ratings": 2,
     "text": "Nunc vestibulum ante dapibus, aliquet mi quis, venenatis arcu. Aliquam cursus nulla sapien, at auctor diam condimentum id. Mauris sed orci vitae felis ultricies imperdiet. Morbi pellentesque libero nec lorem placerat, id tristique nisi malesuada. Maecenas faucibus sit amet orci sed pretium. Nam non porttitor neque. Curabitur euismod, diam eget blandit egestas, tellus neque efficitur diam, quis porta augue lectus non orci.",
     "comments": [
@@ -42,7 +42,7 @@
       "name": "Freddie Miller Jr.",
       "photo": "https://randomuser.me/api/portraits/men/42.jpg"
     },
-    "isRecommended": true,
+    "isPositive": true,
     "ratings": 4,
     "text": "Nam maximus tellus auctor leo imperdiet interdum. Cras odio ipsum, commodo quis tempus sit amet, tincidunt venenatis eros. Etiam et tellus vestibulum, tempor mi ut, porttitor lacus. Curabitur pharetra nulla odio. Phasellus quis maximus eros, vitae ornare mi. Cras a nibh dolor. Duis vel urna hendrerit, dictum tortor non, convallis erat.",
     "comments": []
@@ -55,7 +55,7 @@
       "name": "Darlene Warren",
       "photo": "https://randomuser.me/api/portraits/women/22.jpg"
     },
-    "isRecommended": false,
+    "isPositive": false,
     "ratings": 2,
     "text": "Sed dui sem, porta id risus id, maximus consectetur nisl. Suspendisse facilisis mollis nisl, ut suscipit nibh. Sed non ipsum mi. Curabitur ultricies est et dolor egestas maximus eget a magna. Nullam id feugiat leo.",
     "comments": []
