@@ -1,0 +1,16 @@
+.header {
+  background: url('../images/hero-picture.jpg') no-repeat;
+  height: 500px;
+  padding-top: 30px;
+  box-sizing: border-box;
+  position: relative;
+
+  &__logo {
+    position: absolute;
+    top: 65px;
+    left: 140px;
+    &__img {
+      width: 180px;
+    }
+  }
+}
