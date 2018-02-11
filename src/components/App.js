@@ -5,6 +5,7 @@ import {connect} from 'react-redux';
 import * as ReviewsActions from '../actions/reviews.actions';
 
 import Header from './Header';
+import Footer from './Footer';
 
 class App extends React.Component {
 
@@ -14,9 +15,13 @@ class App extends React.Component {
 
     render() {
         return (
-            <main className="main">
+            <section className="main">
                 <Header/>
-            </main>
+                <main className="content">
+                    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                </main>
+                <Footer/>
+            </section>
         );
     }
 
