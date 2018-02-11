@@ -3,30 +3,29 @@
   height: 100px;
   margin: 0 auto;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, .2);
 
   &__list {
     display: flex;
     justify-content: flex-end;
+
     &__item {
       height: 100px;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 0 15px;
+      padding: 0 25px;
       cursor: pointer;
-      &--active {
-        background: #ccc;
-      }
-      &:last-child {
-        padding-right: 30px;
-      }
+
+      &--active,
       &:hover {
-        background: #ccc;
+        background: var(--color-porcelain);
       }
+
       &__link {
-        font-size: 14px;
+        font-size: 13px;
         text-decoration: none;
+        color: var(--color-endeavour);
       }
     }
   }
