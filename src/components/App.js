@@ -6,6 +6,7 @@ import * as ReviewsActions from '../actions/reviews.actions';
 
 import Header from './Header';
 import Footer from './Footer';
+import ReviewsList from './ReviewsList';
 
 class App extends React.Component {
 
@@ -18,7 +19,7 @@ class App extends React.Component {
             <section className="main">
                 <Header/>
                 <main className="content">
-                    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                    <ReviewsList reviews={this.props.reviews}/>
                 </main>
                 <Footer/>
             </section>
@@ -28,11 +29,14 @@ class App extends React.Component {
 }
 
 App.propTypes = {
+    reviews: PropTypes.array,
     getReviews: PropTypes.func,
 };
+
+const mapStateToProps = (reviews) => (reviews);
 
 const mapDispatchToProps = {
     getReviews: ReviewsActions.getReviews
 };
 
-export default connect(null, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);
