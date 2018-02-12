@@ -15,8 +15,42 @@
   }
 
   &__scores {
-    padding: 15px 0;
     width: 300px;
     margin: 0 auto;
+
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+
+  &__text {
+    padding: 20px 0;
+    width: 460px;
+    margin: 0 auto;
+    font-size: var(--font-size-2);
+    line-height: var(--font-size-4);
+    color: var(--color-boulder);
+
+    &--full {
+
+    }
+
+    &--short {
+      position: relative;
+      max-height: 85px;
+      overflow: hidden;
+    }
+
+    &__gradient {
+      display: block;
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 100%;
+      height: 30px;
+      background-image: linear-gradient(to bottom, transparent, white);
+    }
   }
 }

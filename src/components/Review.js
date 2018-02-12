@@ -6,26 +6,64 @@ import Time from './Review/Time';
 import Recommendation from './Review/Recommendation';
 import Rating from './Review/Rating';
 
-const Review = ({id, title, date, author, isPositive, rating, text, comments}) => (
-    <li className="review">
-        <section>
+class Review extends React.Component {
 
-            <Author {...author}/>
+    constructor(props) {
+        super(props);
+        this.state = {
+            showFull: false
+        };
+        this.handleTextClick = this.handleTextClick.bind(this);
+    }
 
-            <Time date={date}/>
+    handleTextClick() {
+        this.setState({
+            showFull: true
+        });
+    }
 
-            <h1 className="review__header">{title}</h1>
+    render() {
 
-            <section className="review__scores">
+        const {
+            id,
+            title,
+            date,
+            author,
+            isPositive,
+            rating,
+            text,
+            comments
+        } = this.props;
 
-                <Recommendation isPositive={isPositive}/>
-                <Rating rating={rating}/>
+        return (
+            <li className="review">
+                <section>
 
-            </section>
+                    <Author {...author}/>
 
-        </section>
-    </li>
-);
+                    <Time date={date}/>
+
+                    <h1 className="review__header">{title}</h1>
+
+                    <section className="review__scores">
+
+                        <Recommendation isPositive={isPositive}/>
+                        <Rating rating={rating}/>
+
+                    </section>
+
+                    <section
+                        className={`review__text ${this.state.showFull ? 'review__text--full' : 'review__text--short'}`}
+                        onClick={this.handleTextClick}>
+                        {!this.state.showFull && <span className="review__text__gradient"/>}
+                        {text}
+                    </section>
+
+                </section>
+            </li>
+        );
+    }
+}
 
 Review.propTypes = {
     id: PropTypes.string,
