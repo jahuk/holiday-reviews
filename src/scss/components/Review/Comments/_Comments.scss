@@ -1,0 +1,7 @@
+.comments {
+  text-align: center;
+
+  &__button {
+    @extend %button;
+  }
+}

@@ -3,13 +3,14 @@ import PropTypes from 'prop-types';
 
 import Review from './Review';
 
-const ReviewsList = ({reviews}) => (
+const ReviewsList = ({reviews, addComment}) => (
     <section className="reviews">
         <ol className="reviews__list">
 
             { reviews.map((review) => (
                 <Review
                     key={review.id}
+                    addComment={addComment}
                     {...review}
                 />
             ))}
@@ -20,6 +21,7 @@ const ReviewsList = ({reviews}) => (
 
 ReviewsList.propTypes = {
     reviews: PropTypes.array,
+    addComment: PropTypes.func
 };
 
 export default ReviewsList;

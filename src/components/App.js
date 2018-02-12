@@ -15,11 +15,17 @@ class App extends React.Component {
     }
 
     render() {
+
+        const {
+            reviews,
+            addComment
+        } = this.props;
+
         return (
             <section className="main">
                 <Header/>
                 <main className="content">
-                    <ReviewsList reviews={this.props.reviews}/>
+                    <ReviewsList reviews={reviews} addComment={addComment} />
                 </main>
                 <Footer/>
             </section>
@@ -31,12 +37,14 @@ class App extends React.Component {
 App.propTypes = {
     reviews: PropTypes.array,
     getReviews: PropTypes.func,
+    addComment: PropTypes.func
 };
 
 const mapStateToProps = (reviews) => (reviews);
 
 const mapDispatchToProps = {
-    getReviews: ReviewsActions.getReviews
+    getReviews: ReviewsActions.getReviews,
+    addComment: ReviewsActions.addComment
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

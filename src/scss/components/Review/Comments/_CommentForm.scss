@@ -1,0 +1,16 @@
+.commentForm {
+
+  &__textarea {
+    box-sizing: border-box;
+    margin: 30px 0 0;
+    padding: 10px;
+    height: 100px;
+    width: 455px;
+    border: 1px solid var(--color-silver);
+    font-size: var(--font-size-1);
+  }
+
+  &__button {
+    @extend %button;
+  }
+}

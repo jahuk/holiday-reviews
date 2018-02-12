@@ -5,6 +5,7 @@ import Author from './Review/Author';
 import Time from './Review/Time';
 import Recommendation from './Review/Recommendation';
 import Rating from './Review/Rating';
+import Comments from './Review/Comments';
 
 class Review extends React.Component {
 
@@ -32,7 +33,8 @@ class Review extends React.Component {
             isPositive,
             rating,
             text,
-            comments
+            comments,
+            addComment
         } = this.props;
 
         return (
@@ -59,6 +61,8 @@ class Review extends React.Component {
                         {text}
                     </section>
 
+                    <Comments comments={comments} reviewId={id} addComment={addComment}/>
+
                 </section>
             </li>
         );
@@ -73,7 +77,8 @@ Review.propTypes = {
     isPositive: PropTypes.bool,
     rating: PropTypes.number,
     text: PropTypes.string,
-    comments: PropTypes.array
+    comments: PropTypes.array,
+    addComment: PropTypes.func
 };
 
 export default Review;
