@@ -19,7 +19,6 @@ const Review = ({id, title, date, author, isPositive, rating, text, comments}) =
             <section className="review__scores">
 
                 <Recommendation isPositive={isPositive}/>
-
                 <Rating rating={rating}/>
 
             </section>

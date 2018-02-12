@@ -1,6 +1,34 @@
 .rating {
-  background: yellow;
   float: left;
-  width: 340px;
+  width: 240px;
   height: 40px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 2px solid var(--color-porcelain);
+  text-align: center;
+
+  &__stars {
+    width: 160px;
+    float: left;
+
+    .icon-star {
+      margin: 0 5px;
+      font-size: var(--font-size-3);
+
+      &--full {
+        color: var(--color-yellow);
+      }
+
+      &--empty {
+        color: var(--color-porcelain);
+      }
+    }
+  }
+
+  &__numbers {
+    width: 56px;
+    float: left;
+    font-size: var(--font-size-2);
+    line-height: var(--font-size-3);
+  }
 }
