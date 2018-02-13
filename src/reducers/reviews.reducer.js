@@ -1,4 +1,5 @@
 import * as ReviewsActions from '../actions/reviews.actions';
+import {SESSION_USER} from './constans/constans';
 
 const defaultState = [];
 
@@ -16,7 +17,10 @@ export default (state = defaultState, action) => {
                         ...review,
                         comments: [
                             ...review.comments,
-                            action.comment
+                            {
+                                author: SESSION_USER,
+                                text: action.comment
+                            }
                         ]
                     }
                     : review;
