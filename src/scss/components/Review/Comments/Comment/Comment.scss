@@ -1,0 +1,20 @@
+.comment {
+  background: var(--color-porcelain);
+  margin-top: 30px;
+
+  &__header {
+    font-weight: bold;
+    font-size: var(--font-size-2);
+    padding: 20px 0 10px;
+  }
+
+  &__text {
+    width: 460px;
+    text-align: left;
+    padding-bottom: 40px;
+    margin: 0 auto 90px;
+    font-size: var(--font-size-2);
+    line-height: var(--font-size-4);
+    color: var(--color-boulder);
+  }
+}

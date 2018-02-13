@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import CommentForm from './Comments/CommentForm';
+import CommentsList from './Comments/CommentsList';
 
 class Comments extends React.Component {
 
@@ -44,8 +45,9 @@ class Comments extends React.Component {
             <section className="comments">
 
                 { addingComment && <CommentForm reviewId={reviewId} addComment={addComment} closeCommentForm={this.closeCommentForm} /> }
-
                 { !addingComment && <button className="comments__button" onClick={this.handleButtonClick}>Add Comment</button> }
+
+                <CommentsList comments={comments}/>
 
             </section>
         );
