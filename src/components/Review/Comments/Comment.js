@@ -15,7 +15,7 @@ class Comment extends React.Component {
 
     handleTextClick(){
         this.setState({
-            showFull: true
+            showFull: !this.state.showFull
         });
     }
 

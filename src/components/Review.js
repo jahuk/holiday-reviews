@@ -19,7 +19,7 @@ class Review extends React.Component {
 
     handleTextClick() {
         this.setState({
-            showFull: true
+            showFull: !this.state.showFull
         });
     }
 
