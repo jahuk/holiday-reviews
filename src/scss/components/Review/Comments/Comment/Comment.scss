@@ -16,5 +16,25 @@
     font-size: var(--font-size-2);
     line-height: var(--font-size-4);
     color: var(--color-boulder);
+
+    &--full {
+
+    }
+
+    &--short {
+      position: relative;
+      max-height: 62px;
+      overflow: hidden;
+    }
+
+    &__gradient {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 70px;
+      background-image: linear-gradient(to bottom, transparent 0%, var(--color-porcelain) 50%,var(--color-porcelain) 51%,var(--color-porcelain) 100%);
+    }
   }
 }
