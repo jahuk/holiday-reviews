@@ -6,9 +6,9 @@ import Comment from './Comment';
 const CommentsList = ({comments}) => (
     <ol className="commentsList">
 
-        { comments.map((comment) => (
+        {comments.map((comment, i) => (
             <Comment
-                key={comment.id}
+                key={i}
                 {...comment}
             />
         ))}

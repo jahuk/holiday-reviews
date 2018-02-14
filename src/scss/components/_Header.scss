@@ -1,9 +1,9 @@
 .header {
-  background: url('../images/hero-picture.jpg') no-repeat;
+  box-sizing: border-box;
   height: 500px;
   padding-top: 30px;
-  box-sizing: border-box;
   position: relative;
+  background: url('../images/hero-picture.jpg') no-repeat;
   z-index: 1;
 
   &__logo {

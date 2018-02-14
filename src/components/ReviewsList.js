@@ -7,7 +7,7 @@ const ReviewsList = ({reviews, addComment}) => (
     <section className="reviews">
         <ol className="reviews__list">
 
-            { reviews.map((review) => (
+            {reviews.map((review) => (
                 <Review
                     key={review.id}
                     addComment={addComment}

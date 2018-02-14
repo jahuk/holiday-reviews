@@ -32,7 +32,7 @@ class CommentForm extends React.Component {
         return (
             <form className="commentForm">
 
-                <textarea className="commentForm__textarea" ref={(el) => this._textarea = el} />
+                <textarea className="commentForm__textarea" ref={(el) => this._textarea = el}/>
                 <button className="commentForm__button" onClick={this.handleCancelComment}>Cancel</button>
                 <button className="commentForm__button" onClick={this.handleSendComment}>Send comment</button>
 

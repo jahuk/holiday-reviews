@@ -25,7 +25,7 @@ class App extends React.Component {
             <section className="main">
                 <Header/>
                 <main className="content">
-                    <ReviewsList reviews={reviews} addComment={addComment} />
+                    <ReviewsList reviews={reviews} addComment={addComment}/>
                 </main>
                 <Footer/>
             </section>

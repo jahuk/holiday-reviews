@@ -4,6 +4,7 @@ import webpack from 'webpack';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import WebpackMd5Hash from 'webpack-md5-hash';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
 import path from 'path';
 
 const GLOBALS = {
@@ -36,7 +37,6 @@ export default {
     // Generate HTML file that contains references to generated bundles. See here for how this works: https://github.com/ampedandwired/html-webpack-plugin#basic-usage
     new HtmlWebpackPlugin({
       template: 'src/index.ejs',
-      favicon: 'src/favicon.ico',
       minify: {
         removeComments: true,
         collapseWhitespace: true,
@@ -57,6 +57,11 @@ export default {
 
     // Minify JS
     new webpack.optimize.UglifyJsPlugin({ sourceMap: true }),
+
+    new CopyWebpackPlugin([
+      {from: path.resolve(__dirname, 'src/data'), to: path.resolve(__dirname, 'dist/data')},
+      {from: path.resolve(__dirname, 'src/images'), to: path.resolve(__dirname, 'dist/images')},
+    ])
   ],
   module: {
     rules: [

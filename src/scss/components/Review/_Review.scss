@@ -10,8 +10,8 @@
   &__header {
     padding: 15px 0;
     text-align: center;
-    font-size: var(--font-size-4);
     color: var(--color-boulder);
+    font-size: var(--font-size-4);
   }
 
   &__scores {
@@ -26,16 +26,12 @@
   }
 
   &__text {
-    padding: 20px 0;
     width: 460px;
+    padding: 20px 0;
     margin: 0 auto;
+    color: var(--color-boulder);
     font-size: var(--font-size-2);
     line-height: var(--font-size-4);
-    color: var(--color-boulder);
-
-    &--full {
-
-    }
 
     &--short {
       position: relative;
@@ -45,12 +41,12 @@
 
     &__gradient {
       display: block;
+      width: 100%;
+      height: 30px;
       position: absolute;
       bottom: -4px;
       left: 0;
-      width: 100%;
-      height: 30px;
-      background-image: linear-gradient(to bottom, transparent, white);
+      background-image: linear-gradient(to bottom, transparent, var(--color-white));
     }
   }
 }

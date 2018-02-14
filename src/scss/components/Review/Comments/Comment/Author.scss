@@ -11,15 +11,15 @@
   }
 
   &__caption {
-    font-size: var(--font-size-1);
-    font-weight: bold;
     padding: 5px 0;
     color: var(--color-boulder);
+    font-size: var(--font-size-1);
+    font-weight: bold;
   }
 
   &__profession {
+    color: var(--color-boulder);
     font-size: var(--font-size-1);
     font-weight: normal;
-    color: var(--color-boulder);
   }
 }
