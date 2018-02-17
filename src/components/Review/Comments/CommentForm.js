@@ -3,17 +3,11 @@ import PropTypes from 'prop-types';
 
 class CommentForm extends React.Component {
 
-    constructor(props) {
-        super(props);
-        this.handleSendComment = this.handleSendComment.bind(this);
-        this.handleCancelComment = this.handleCancelComment.bind(this);
-    }
-
     componentDidMount() {
         this._textarea.focus();
     }
 
-    handleSendComment(e) {
+    handleSendComment = (e) => {
         e.preventDefault();
 
         if (this._textarea.value) {
@@ -22,7 +16,7 @@ class CommentForm extends React.Component {
         }
     }
 
-    handleCancelComment(e) {
+    handleCancelComment = (e) => {
         e.preventDefault();
 
         this.props.closeCommentForm();

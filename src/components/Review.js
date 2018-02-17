@@ -9,15 +9,14 @@ import Comments from './Review/Comments';
 
 class Review extends React.Component {
 
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
         this.state = {
             showFull: false
         };
-        this.handleTextClick = this.handleTextClick.bind(this);
     }
 
-    handleTextClick() {
+    handleTextClick = () => {
         this.setState({
             showFull: !this.state.showFull
         });

@@ -6,16 +6,14 @@ import CommentsList from './Comments/CommentsList';
 
 class Comments extends React.Component {
 
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
         this.state = {
             addingComment: false
         };
-        this.handleButtonClick = this.handleButtonClick.bind(this);
-        this.closeCommentForm = this.closeCommentForm.bind(this);
     }
 
-    handleButtonClick() {
+    handleButtonClick = () => {
         this.openCommentForm();
     }
 
@@ -25,7 +23,7 @@ class Comments extends React.Component {
         });
     }
 
-    closeCommentForm() {
+    closeCommentForm = () => {
         this.setState({
             addingComment: false
         });
